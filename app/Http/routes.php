@@ -13,5 +13,9 @@
 
 Route::get('/', function () {
     /*return view('welcome');*/
-    echo 'Social Networking';
+    echo 'Social Networking ';
+});
+
+Route ::get('hello', function(){
+	echo 'hello freinds';
 });
