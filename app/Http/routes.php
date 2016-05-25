@@ -13,9 +13,9 @@
 
 Route::get('/', function () {
     /*return view('welcome');*/
-    echo 'Social Networking ';
+      return view('home.index',['name' => 'Naveen']);
+});
+Route::get('/register', function (){
+	return view('home.register');
 });
 
-Route ::get('hello', function(){
-	echo 'hello freinds';
-});
