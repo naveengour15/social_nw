@@ -13,9 +13,13 @@
 
 Route::get('/', function () {
     /*return view('welcome');*/
-      return view('home.index',['name' => 'Naveen']);
+      return view('auth.login');
 });
 Route::get('/register', function (){
 	return view('home.register');
 });
 
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
