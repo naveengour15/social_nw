@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Auth;
+
+use DB;
+use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
@@ -24,6 +28,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        if (Auth::check()) {
+            return view('home');
+        }
+        else{
+            return view('auth.login');
+        }
     }
+
+    public function showfriend()
+    {
+        $users = DB::table('users')->get();
+         
+        return view('/auth.showfriend', ['users' => $users]);
+    }
+
 }
