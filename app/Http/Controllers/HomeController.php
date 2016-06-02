@@ -43,4 +43,10 @@ class HomeController extends Controller
         return view('/auth.showfriend', ['users' => $users]);
     }
 
+    public function viewProfile(){
+        
+        $users = DB::table('users')->get();
+        return view('/auth.viewProfile', ['users' => $users]);
+    }
+
 }

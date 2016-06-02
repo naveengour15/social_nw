@@ -25,3 +25,5 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/showfriend', 'HomeController@showfriend');
+
+Route::get('/viewProfile', 'HomeController@viewProfile');
