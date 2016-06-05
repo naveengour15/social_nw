@@ -11,21 +11,21 @@
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
-        <link rel="stylesheet" href="bootstrap1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css1/animate.css">
-        <link rel="stylesheet" href="css1/magnific-popup.css">
-        <link rel="stylesheet" href="flexslider/flexslider.css">
-        <link rel="stylesheet" href="css1/form-elements.css">
-        <link rel="stylesheet" href="css1/style.css">
-        <link rel="stylesheet" href="css1/media-queries.css">
+        <link rel="stylesheet" href="/bootstrap1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css1/animate.css">
+        <link rel="stylesheet" href="/css1/magnific-popup.css">
+        <link rel="stylesheet" href="/flexslider/flexslider.css">
+        <link rel="stylesheet" href="/css1/form-elements.css">
+        <link rel="stylesheet" href="/css1/style.css">
+        <link rel="stylesheet" href="/css1/media-queries.css">
 
         <!-- Favicon and touch icons -->
         <link rel="shortcut icon" href="ico/favicon.ico">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
 
 
 
@@ -36,11 +36,11 @@
         <title>SocialN/W</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-        <link rel="stylesheet" href="css/color.css" type="text/css">
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/TweenLite.min.js"></script>
+        <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="/css/color.css" type="text/css">
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/TweenLite.min.js"></script>
  
         <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -50,7 +50,7 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script src="js/validation.js"></script>
+        <script src="/js/validation.js"></script>
 <!-- end -->
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
@@ -100,7 +100,7 @@
                             <a href="services.html"><i class="fa fa-tasks"></i><br>Setting</a>
                         </li>
                         <li>
-                            <a href="{{ url('/viewProfile')}}"><i class="fa fa-user"></i><br>Profile</a>
+                            <a href="{{ url('/viewprofile/'.Auth::user()->id)}}"><i class="fa fa-user"></i><br>Profile</a>
                         </li>
                         <li>
                             <a href="contact.html"><i class="fa fa-envelope"></i><br>Messages</a>
@@ -209,18 +209,18 @@
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}} -->
 
 
-        <script src="js1/jquery-1.11.1.min.js"></script>
-        <script src="bootstrap1/js/bootstrap.min.js"></script>
-        <script src="js1/bootstrap-hover-dropdown.min.js"></script>
-        <script src="js1/jquery.backstretch.min.js"></script>
-        <script src="js1/wow.min.js"></script>
-        <script src="js1/retina-1.1.0.min.js"></script>
-        <script src="js1/jquery.magnific-popup.min.js"></script>
-        <script src="flexslider/jquery.flexslider-min.js"></script>
-        <script src="js1/jflickrfeed.min.js"></script>
-        <script src="js1/masonry.pkgd.min.js"></script>
+        <script src="/js1/jquery-1.11.1.min.js"></script>
+        <script src="/bootstrap1/js/bootstrap.min.js"></script>
+        <script src="/js1/bootstrap-hover-dropdown.min.js"></script>
+        <script src="/js1/jquery.backstretch.min.js"></script>
+        <script src="/js1/wow.min.js"></script>
+        <script src="/js1/retina-1.1.0.min.js"></script>
+        <script src="/js1/jquery.magnific-popup.min.js"></script>
+        <script src="/flexslider/jquery.flexslider-min.js"></script>
+        <script src="/js1/jflickrfeed.min.js"></script>
+        <script src="/js1/masonry.pkgd.min.js"></script>
         <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-        <script src="js1/jquery.ui.map.min.js"></script>
-        <script src="js1/scripts.js"></script>
+        <script src="/js1/jquery.ui.map.min.js"></script>
+        <script src="/js1/scripts.js"></script>
 </body>
 </html>

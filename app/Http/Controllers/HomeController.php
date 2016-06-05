@@ -6,6 +6,7 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use Auth;
 
+use App\User;
 use DB;
 use App\Http\Controllers\Controller;
 
@@ -43,10 +44,12 @@ class HomeController extends Controller
         return view('/auth.showfriend', ['users' => $users]);
     }
 
-    public function viewProfile(){
-        
-        $users = DB::table('users')->get();
-        return view('/auth.viewProfile', ['users' => $users]);
+    public function viewProfile($id){
+
+        $user = User::find($id);
+       /*  return View::make('/auth.viewProfile', array('user' => $user));
+       $users = DB::table('users')->get();  */
+        return view('/auth.viewProfile', ['user' => $user]);
     }
 
 }

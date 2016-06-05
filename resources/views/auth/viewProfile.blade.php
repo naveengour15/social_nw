@@ -14,16 +14,16 @@
                         user detail: 
                         <table>
                             
-                       <?php foreach ($users as $user) { ?>  
+                       <?php //foreach ($users as $user) { ?>  
 
                             <tr>
-                                <td><?php echo $user->username; ?></td>
-                                <td><?php echo $user->id; ?></td>
-                                <td><?php echo $user->email; ?></td>
+                                <td>{{ $user->username }}</td>
+                                <td>{{ $user->id }}</td>
+                                <td>{{ $user->email }}</td>
                             </tr>
 
                         <?php 
-                            }
+                           // }
                         ?>
                         </table>    
                     </div>
