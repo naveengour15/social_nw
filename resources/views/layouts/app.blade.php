@@ -58,7 +58,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}} 
+     
 <!-- 
     <style>
         body {
@@ -71,75 +71,25 @@
     </style> -->
 </head>
 <body>
+  
+<!-- header -->
+        @yield('header')
+<!-- header -->
 
-        <!-- Top menu -->
-       <nav class="navbar" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">Andia - a super cool design agency...</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="top-navbar-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active">
-                            <a href="{{ url('/home') }}">
-                                <i class="fa fa-home"></i><br>Home 
-                            </a>
-                           
-                        </li>
-                        <li class="">
-                            <a href="portfolio.html"><i class="fa fa-camera"></i><br>Photo</a>
-                        </li>
-                        <li>
-                            <a href="services.html"><i class="fa fa-tasks"></i><br>Setting</a>
-                        </li>
-                        <li>
-                            <a href="{{ url('/viewprofile/'.Auth::user()->id)}}"><i class="fa fa-user"></i><br>Profile</a>
-                        </li>
-                        <li>
-                            <a href="contact.html"><i class="fa fa-envelope"></i><br>Messages</a>
-                        </li>
-                     
-                    <!-- Authentication Links -->
-                @if (Auth::guest())
-                        <li>
-                        <a href="{{ url('/login') }}"><i class="fa fa-sign-in"></i><br>Login</a></li>
-                        <li><a href="{{ url('/register') }}" ><i class="fa fa-lock"></i><br>Register</a></li>
-                        
-                @else
-                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
-                                <i class="fa fa-paperclip"></i><br> {{ Auth::user()->username }} <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                            </ul>
-                        </li>
-                @endif
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        
         <!-- Page Title -->
+
+                     
+  
         <div class="page-title-container">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 wow fadeIn">
-                        <i class="fa fa-home"></i>
-                        <h1>Home /</h1>
-                        <p>Here is the work we've done so far</p>
+                     <i class="fa fa-home"></i>
+   @yield('breadcrumbs')
                     </div>
                 </div>
             </div>
         </div>
-
 
 
 <!--    old code ..........................
@@ -203,6 +153,7 @@
 
     @yield('content')
 
+    @yield('footer')
     <!-- JavaScripts -->
   <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

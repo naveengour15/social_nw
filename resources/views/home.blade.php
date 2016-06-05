@@ -1,5 +1,14 @@
 @extends('layouts.app')
 
+@section('header')
+    @include('layouts.header')
+@endsection
+
+
+@section('breadcrumbs')
+    {!! Breadcrumbs::render('home') !!}
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row">
@@ -18,4 +27,9 @@
         </div>
     </div>
 </div>
+@endsection
+
+
+@section('footer')
+    @include('layouts.footer');
 @endsection

@@ -15,15 +15,18 @@ Route::get('/', function () {
     /*return view('welcome');*/
       return view('auth.login');
 });
-Route::get('/register', function (){
+Route::get('register', function (){
 	return view('home.register');
 });
 
 
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
+Route::get('home', ['uses' => 'HomeController@index', 'as' => 'home']);
+/*Route::get('home', 'HomeController@index');*/
 
-Route::get('/showfriend', 'HomeController@showfriend');
+Route::get('showfriend', 'HomeController@showfriend');
 
-Route::get('/viewprofile/{id}', 'HomeController@viewProfile');
+Route::get('viewprofile/{id}', ['uses' => 'HomeController@viewProfile', 'as' => 'viewprofile']);
+
+/*Route::get('viewprofile/{id}', 'HomeController@viewProfile');*/

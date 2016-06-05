@@ -41,7 +41,7 @@ class HomeController extends Controller
     {
         $users = DB::table('users')->get();
          
-        return view('/auth.showfriend', ['users' => $users]);
+        return view('auth.showfriend', ['users' => $users]);
     }
 
     public function viewProfile($id){
@@ -49,7 +49,7 @@ class HomeController extends Controller
         $user = User::find($id);
        /*  return View::make('/auth.viewProfile', array('user' => $user));
        $users = DB::table('users')->get();  */
-        return view('/auth.viewProfile', ['user' => $user]);
+        return view('auth.viewProfile', ['user' => $user, 'id' => $user->id ]);
     }
 
 }
