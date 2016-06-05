@@ -52,4 +52,9 @@ class HomeController extends Controller
         return view('auth.viewProfile', ['user' => $user, 'id' => $user->id ]);
     }
 
+    public function editProfile($id){
+        $user = User::find($id);
+        return view('auth.editProfile', ['user' => $user, 'id' => $user->id]);
+    }
+
 }

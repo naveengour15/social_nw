@@ -29,4 +29,5 @@ Route::get('showfriend', 'HomeController@showfriend');
 
 Route::get('viewprofile/{id}', ['uses' => 'HomeController@viewProfile', 'as' => 'viewprofile']);
 
+Route::get('editprofile/{id}', 'HomeController@editprofile');
 /*Route::get('viewprofile/{id}', 'HomeController@viewProfile');*/

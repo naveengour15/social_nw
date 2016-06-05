@@ -32,7 +32,6 @@
                             <a href="{{ url('/viewprofile/'.Auth::user()->id)}}"><i class="fa fa-user"></i><br>Profile</a>
                         </li>
                          <li class="{{ Request::is( 'message', 'message/*' ) ? 'active' : '' }}" >  
-                      
                             <a href="contact.html"><i class="fa fa-envelope"></i><br>Messages</a>
                         </li>
                      

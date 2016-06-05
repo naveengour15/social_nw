@@ -13,3 +13,9 @@ Breadcrumbs::register('viewprofile', function($breadcrumbs, $id ) {
 	$breadcrumbs->push( $id, route('viewprofile', $id));
 });
 
+
+Breadcrumbs::register('editprofile', function($breadcrumbs, $id ) {
+	//$breadcrumbs->parent('home');
+	$breadcrumbs->push('Profile', route('viewprofile', $id));
+	$breadcrumbs->push( "EditProfile/".$id, route('viewprofile', $id));
+});

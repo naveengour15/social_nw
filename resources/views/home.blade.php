@@ -20,8 +20,8 @@
                 <div class="panel-body">
                     You are logged in! naveen
                     <div><a href="/showfriend" class="btn btn-primary btn-lg">show freand</a> 
+                    
                     </div>
-
                 </div>
             </div>
         </div>
